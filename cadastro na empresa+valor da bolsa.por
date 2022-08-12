@@ -2,8 +2,11 @@ programa
 {
 	inclua biblioteca Matematica --> m
 	inclua biblioteca Util --> u
-	cadeia a, b, c, d, f  
-	inteiro op, op1, es,
+	cadeia a, c, d,g  
+	inteiro op, op1, es,b, f, ops
+
+	real alm = 1126.85, bols1, bols2, bols3
+	
 	funcao inicio()
 	{
 
@@ -48,50 +51,54 @@ programa
 				escreva("Digite seu telefone: ")
 				leia(f)
 
-				escreva("\nVocê ainda estuda?\n1)sim \n2)não ")
+				limpa()
+                    
+				escreva("\nVocê ainda estuda?\n1)sim \n2)não\n ")
 				leia(es)
 
+				limpa()
+
 				se (es == 2){
-					
 					escreva("\nSua bolsa é de: R$ 1.126.85 ")
 					}  
 
 				se (es ==	1){
-					escreva("1) Graduação \n 2) Pós-graduação ")
-					
-					
+					escreva("Informe se é: \n\n1)graduação \n2)pós graduação \n3) doutorado:\n")
+					leia(ops)
+					limpa()
 
-
-					
-					}
-
-
-
-
-
+					se (ops == 1 ){
+						bols1 = alm*0.105 + alm
+					escreva("O valor da sua bolsa é: ",m.arredondar(bols1,2))
+						}
+					senao se (ops == 2){
+						bols2 = alm*0.2299 + alm
+						escreva("O valor da sua bolsa é: ",m.arredondar(bols2,2))
+						}	
+					senao se (ops == 3){
+						bols3 = alm*0.31 + alm 
+						escreva("O valor da sua bolsa é: ", m.arredondar( bols3,2) )
+						
+						}	
+																	
+				}
 				
-
+				u.aguarde(3000)
 				limpa()
 	escreva("Cadastro realizado \n\n")
-	escreva("para ver seu cadastro digite 2 \n\npara encerrar o site digite 3:  ")
+	escreva("para ver seu cadastro digite 2 \n\npara encerrar o site digite 3:\n  ")
 	leia(op1)
-	limpa()
-			
+	limpa()			
 			}
 
 		 se ( op1 ==2 ){
 			limpa()
-			
-			escreva ("\nNome: ",a)
-			
+		
+			escreva ("\nNome: ",a)		
 			escreva("\nIdade: ",b)
-			
 			escreva("\nEndereço: ",c)
-			
 			escreva("\nNaturalidade: ",d)
-			
 			escreva("\nTelefone: ",f)}
-			
 			escreva("\n\n\n")
 			
 
@@ -112,28 +119,7 @@ programa
 
 		}
 
-	
-			
-			
-			
-
-	
-				
-			
-		 	
 		
-	
-	
-	
-	
-		
-	
-	
-	
-	
-	
-	
-	
 	}
 }
 
@@ -142,9 +128,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1911; 
+ * @POSICAO-CURSOR = 2385; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
